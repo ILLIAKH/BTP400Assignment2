@@ -12,6 +12,7 @@ public class Person {
 	@Id
 	private String id;
 	private String name;
+	private String password;
 	private String role;
 	
 	
@@ -70,6 +71,14 @@ public class Person {
 
 	public void setCourse(Course course) {
 		this.course = course;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 	

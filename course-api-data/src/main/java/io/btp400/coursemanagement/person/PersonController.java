@@ -33,15 +33,15 @@ public class PersonController {
 	}
 	
 	//CREATE NEW
-		@RequestMapping(method = RequestMethod.POST, value = "/users/{courseId}/{topicId}")
-		public void addCourse(@PathVariable String topicId, @PathVariable String courseId, @RequestBody Person person)
-		{
-			person.setCourse(new Course(courseId, "", "", topicId));
-			personService.addPerson(person);
-		}
+	@RequestMapping(method = RequestMethod.POST, value = "/users/{courseId}/{topicId}")
+	public void addCourse(@PathVariable String topicId, @PathVariable String courseId, @RequestBody Person person)
+	{
+		person.setCourse(new Course(courseId, "", "", topicId));
+		personService.addPerson(person);
+	}
 	
 	//UPDATE
-	@RequestMapping(method = RequestMethod.PUT, value = "/users/{courseId}/courses/{topicId}/update")
+	@RequestMapping(method = RequestMethod.PUT, value = "/users/{courseId}/{topicId}/update")
 	public void updateCourse(@RequestBody Person person, @PathVariable String topicId, @PathVariable String courseId)
 	{
 		person.setCourse(new Course(courseId, "", "", topicId));
