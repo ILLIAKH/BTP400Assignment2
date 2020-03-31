@@ -6,6 +6,7 @@ import javax.persistence.ManyToOne;
 
 import io.btp400.coursemanagement.course.Course;
 
+//test
 @Entity
 public class Person {
 	
