@@ -1,3 +1,4 @@
+//@author Glib Zayarny
 package io.btp400.coursemanagement.topic;
 
 import javax.persistence.Entity;

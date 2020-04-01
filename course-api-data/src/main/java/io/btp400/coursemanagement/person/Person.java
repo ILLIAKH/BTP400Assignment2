@@ -1,3 +1,4 @@
+//@author Palak Chawla
 package io.btp400.coursemanagement.person;
 
 import javax.persistence.Entity;

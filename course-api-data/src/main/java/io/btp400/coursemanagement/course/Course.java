@@ -1,5 +1,5 @@
 package io.btp400.coursemanagement.course;
-
+//@author Illia Khomenko
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;

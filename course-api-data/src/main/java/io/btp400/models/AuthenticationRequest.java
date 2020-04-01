@@ -1,3 +1,5 @@
+//@author Palak Chawla
+
 package io.btp400.models;
 
 public class AuthenticationRequest {

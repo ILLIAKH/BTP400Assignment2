@@ -1,3 +1,4 @@
+//@author Palak Chawla
 package io.btp400.coursemanagement.person;
 
 import java.util.Arrays;
@@ -65,21 +66,21 @@ public class PersonController {
 	
 	//GET ALL
 	@RequestMapping("/users")
-	public List<Person> getAllTopics()
+	public List<Person> getAllUsers()
 	{
 		return personService.getAllpeople();
 	}	
 	
 	//GET ONE
 	@RequestMapping("/users/{id}")
-	public Person getOneTopic(@PathVariable String id)
+	public Person getOneUser(@PathVariable String id)
 	{
 		return personService.getPerson(id);
 	}
 	
 	//CREATE NEW
 	@RequestMapping(method = RequestMethod.POST, value = "/users/{courseId}/{topicId}")
-	public void addCourse(@PathVariable String topicId, @PathVariable String courseId, @RequestBody Person person)
+	public void addUser(@PathVariable String topicId, @PathVariable String courseId, @RequestBody Person person)
 	{
 		person.setCourse(new Course(courseId, "", "", topicId));
 		personService.addPerson(person);
@@ -87,7 +88,7 @@ public class PersonController {
 	
 	//UPDATE
 	@RequestMapping(method = RequestMethod.PUT, value = "/users/{courseId}/{topicId}/update")
-	public void updateCourse(@RequestBody Person person, @PathVariable String topicId, @PathVariable String courseId)
+	public void updateUser(@RequestBody Person person, @PathVariable String topicId, @PathVariable String courseId)
 	{
 		person.setCourse(new Course(courseId, "", "", topicId));
 		personService.updatePerson(person);
@@ -95,7 +96,7 @@ public class PersonController {
 	
 	//DELETE
 	@RequestMapping(method = RequestMethod.DELETE, value = "/users/{id}")
-	public void deleteTopic(@PathVariable String id)
+	public void deleteUser(@PathVariable String id)
 	{
 		personService.deletePerson(id);
 	}
